@@ -1,27 +1,16 @@
 import { useState } from 'react'
-import {
-  Calendar,
-  ChevronLeft,
-  ChevronRight,
-  Clock,
-  Menu,
-  Play,
-  Search,
-  Star,
-  User,
-  X,
-} from 'lucide-react'
+import { ChevronLeft, ChevronRight, Menu, Search, User, X } from 'lucide-react'
 
 const VIDEO_URL =
   'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260406_094145_4a271a6c-3869-4f1c-8aa7-aeb0cb227994.mp4'
 
-const navLinks = ['Movies', 'TV Series', "Editor's Pick", 'Interviews', 'User Reviews']
+const navLinks = ['Listings', 'Agents', 'Site Visits', 'Deals', 'Insights']
 
 export function Landing({ onLaunchDemo }: { onLaunchDemo: () => void }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <div className="cinematic-hero relative flex h-screen w-full flex-col overflow-hidden bg-black text-white">
+    <div className="hero-video-frame relative flex h-screen w-full flex-col overflow-hidden bg-black text-white">
       <video
         className="fixed inset-0 z-0 h-full w-full object-cover"
         src={VIDEO_URL}
@@ -30,7 +19,7 @@ export function Landing({ onLaunchDemo }: { onLaunchDemo: () => void }) {
         loop
         playsInline
       />
-      <div className="cinematic-blur-mask fixed inset-0 z-[1] pointer-events-none backdrop-blur-xl" />
+      <div className="hero-blur-mask fixed inset-0 z-[1] pointer-events-none backdrop-blur-xl" />
 
       {/* Navbar */}
       <div className="relative z-50 flex items-center justify-between px-4 py-4 sm:px-6 md:px-12 md:py-6">
@@ -39,7 +28,7 @@ export function Landing({ onLaunchDemo }: { onLaunchDemo: () => void }) {
             className="animate-blur-fade-up text-lg font-bold tracking-wide md:text-xl"
             style={{ animationDelay: '0ms' }}
           >
-            CINEMATIC
+            ESTATEFLOW
           </span>
         </div>
 
@@ -128,36 +117,19 @@ export function Landing({ onLaunchDemo }: { onLaunchDemo: () => void }) {
       <div className="relative z-10 flex flex-1 flex-col justify-end px-4 pb-8 sm:px-6 md:px-12 md:pb-16">
         <div className="flex flex-col items-end gap-8 md:flex-row">
           <div className="flex-1">
-            <div
-              className="animate-blur-fade-up mb-6 flex flex-wrap items-center gap-3 text-xs sm:gap-6 sm:text-sm md:mb-8"
-              style={{ animationDelay: '300ms' }}
-            >
-              <span className="flex items-center gap-1.5 font-medium">
-                <Star size={16} className="fill-white sm:h-5 sm:w-5" />
-                8.7/10 IMDB
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Clock size={16} />
-                132 min
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Calendar size={16} />
-                April, 2025
-              </span>
-            </div>
-
             <h1
               className="animate-blur-fade-up mb-4 text-3xl font-normal sm:text-5xl md:mb-6 md:text-6xl lg:text-7xl"
               style={{ letterSpacing: '-0.04em', animationDelay: '400ms' }}
             >
-              Step Through. Work Smarter.
+              From First Lead To Final Closing.
             </h1>
 
             <p
               className="animate-blur-fade-up mb-6 max-w-2xl text-base text-gray-400 sm:text-lg md:mb-12 md:text-xl"
               style={{ animationDelay: '500ms' }}
             >
-              A voyage through forgotten realms, where past and future intertwine.
+              Track leads from portals, brokers, and your website, then move them through
+              site visits, offers, and closings — all with full team visibility.
             </p>
 
             <div className="flex flex-wrap gap-3 sm:gap-4">
@@ -166,15 +138,8 @@ export function Landing({ onLaunchDemo }: { onLaunchDemo: () => void }) {
                 className="animate-blur-fade-up flex items-center gap-2 rounded-full bg-white px-6 py-2.5 font-medium text-black transition-colors hover:bg-gray-200 sm:px-8 sm:py-3"
                 style={{ animationDelay: '600ms' }}
               >
-                <Play size={18} className="fill-black" />
-                Watch Now
-              </button>
-              <button
-                onClick={onLaunchDemo}
-                className="liquid-glass animate-blur-fade-up rounded-full px-6 py-2.5 font-medium sm:px-8 sm:py-3"
-                style={{ animationDelay: '700ms' }}
-              >
-                Learn More
+                View Live Demo
+                <ChevronRight size={18} />
               </button>
             </div>
           </div>

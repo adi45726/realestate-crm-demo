@@ -29,12 +29,12 @@ body {
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
 }
 
-/* Cinematic hero — self-contained typography + effects for the entry screen */
-.cinematic-hero {
+/* Entry hero — self-contained typography + effects for the video landing screen */
+.hero-video-frame {
   font-family: 'Inter', sans-serif;
 }
 
-.cinematic-blur-mask {
+.hero-blur-mask {
   -webkit-mask-image: linear-gradient(to top, black 0%, transparent 45%);
   mask-image: linear-gradient(to top, black 0%, transparent 45%);
 }

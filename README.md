@@ -17,6 +17,21 @@ walkthrough.
 
 ---
 
+## Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/01-landing.png" width="800" alt="EstateFlow CRM cinematic marketing landing page" />
+  <br /><em>Landing page</em>
+  <br /><br />
+  <img src="docs/screenshots/02-login.png" width="800" alt="EstateFlow CRM role picker" />
+  <br /><em>No-credentials role picker</em>
+  <br /><br />
+  <img src="docs/screenshots/03-dashboard.png" width="800" alt="EstateFlow CRM Director overview dashboard" />
+  <br /><em>Director overview dashboard</em>
+</p>
+
+---
+
 ## Table of contents
 
 - [Quick start](#quick-start)
